@@ -108,14 +108,14 @@
 
 <div class="values">
   <div>
-    Copy from below and paste in the <code>player_list_tournaments</code> sheet in your column in Line 2 to save your work.<br />
-    To load your work, copy all lines from your column, Line 2 in the sheet, paste below and click "Reload".<br />
+    Copy from below (Ctrl+A, Ctrl+C) and paste in the <code>player_list_tournaments</code> sheet in your column in Line 2 to save your work (Ctrl+V).<br />
+    To load your work, copy all lines from your column, Line 2 in the sheet, paste below (Ctrl+A, Ctrl+V) and click "Reload".<br />
     <textarea bind:value={currentTournamentValueStr}></textarea>
   </div>
   <button on:click={reload}>Reload</button>
   <div>
-    Copy from below and paste in the <code>player_list_ranked</code> sheet in your column in Line 2 to save your work.<br />
-    To load your work, copy all lines from your column, Line 2 in the sheet, paste below and click "Reload".<br />
+    Copy from below (Ctrl+A, Ctrl+C) and paste in the <code>player_list_ranked</code> sheet in your column in Line 2 to save your work (Ctrl+V).<br />
+    To load your work, copy all lines from your column, Line 2 in the sheet, paste below (Ctrl+A, Ctrl+V) and click "Reload".<br />
     <textarea bind:value={currentRankedValueStr}></textarea>
   </div>
 </div>
@@ -127,6 +127,7 @@
     right: 300px;
     top: 0;
     bottom: 0;
+    overflow: auto;
   }
 
   .values {
@@ -139,6 +140,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-y: scroll;
   }
   .values textarea {
     width: 90%;
