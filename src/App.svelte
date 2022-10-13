@@ -77,9 +77,9 @@
       <tbody>
         {#each tournamentScores[currentPlayer] as score}
           <tr>
-            <td class="map">{score.map}</td>
+            <td class="map"><a href={score.link}>{score.map}</a></td>
             <td class="score">{score.score}</td>
-            <td class="source">{score.source}</td>
+            <td class="source">{score.source} {score.category}</td>
           </tr>
         {/each}
       </tbody>
@@ -108,14 +108,12 @@
 
 <div class="values">
   <div>
-    Copy from below (Ctrl+A, Ctrl+C) and paste in the <code>player_list_tournaments</code> sheet in your column in Line 2 to save your work (Ctrl+V).<br />
-    To load your work, copy all lines from your column, Line 2 in the sheet, paste below (Ctrl+A, Ctrl+V) and click "Reload".<br />
+    Copy from below (click below, Ctrl+A, Ctrl+C) and paste in the <code>player_list_tournaments</code> sheet in your column in Line 2 to save your work (Ctrl+V).<br />
     <textarea bind:value={currentTournamentValueStr}></textarea>
   </div>
   <button on:click={reload}>Reload</button>
   <div>
-    Copy from below (Ctrl+A, Ctrl+C) and paste in the <code>player_list_ranked</code> sheet in your column in Line 2 to save your work (Ctrl+V).<br />
-    To load your work, copy all lines from your column, Line 2 in the sheet, paste below (Ctrl+A, Ctrl+V) and click "Reload".<br />
+    Copy from below (click below, Ctrl+A, Ctrl+C) and paste in the <code>player_list_ranked</code> sheet in your column in Line 2 to save your work (Ctrl+V).<br />
     <textarea bind:value={currentRankedValueStr}></textarea>
   </div>
 </div>
